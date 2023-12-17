@@ -2,16 +2,16 @@
 
 
 let admin;
-let name = "John";
+const name = "John";
 
 admin = name
 alert(admin)
 
-let planetName = "Earth"
-let userName = "Rud Fedir"
+const planetName = "Earth"
+const userName = "Rud Fedir"
 
-let a = "10"
-let b = 10
-let result = a + b
+const a = "10"
+const b = 10
+const result = a + b
 console.log(typeof result)
 console.log(result)

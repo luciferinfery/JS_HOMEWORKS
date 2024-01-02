@@ -43,30 +43,16 @@ const person1 = {
     age: 18,
 }
 const person2 = {
-    name: 'Joe',
-    age: 60,
-}
-const person3 = {
-    ...person1
+    name: 'Alice',
+    age: 18,
 }
 
 console.log(person1 === person2);
-function isEqual(obj1, obj2) {
-    for (const property in obj1) {
-        if (obj1[property] !== obj2[property]) {
-            return false;
-        }
-    }
-    for (const property in obj2) {
-        if (obj1[property] !== obj2[property]) {
-            return false;
-        }
-    }
-    return true;
+
+for(const key in person1) {
+    console.log(key, person1[key] === person2[key])
 }
 
-console.log(isEqual(person1, person2));
-console.log(isEqual(person1, person3));
 
 const animals = [
     {

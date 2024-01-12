@@ -11,4 +11,4 @@ function pow(num, power = 1) {
 }
 
 let result = pow(num, power);
-alert('Результат в степині:', result);
+alert('Результат в степині: ' + result);

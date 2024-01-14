@@ -5,11 +5,11 @@ function padString(str, len, char = '*', isRight = true) {
         return 'помилка, це не рядок';
     }
 
-    if (!len || typeof len !=='number' || isNaN(len) || len <= 0) {
+    if (!len || typeof len !=='number' || len <= 0) {
         return 'помилка, хибна довжина';
     }
 
-    if (typeof char !== 'string' || char.length !== 1 ) {
+    if (typeof char !== 'string' || char.length !== 1) {
         return 'помилка, символ не корректний';
     }
 

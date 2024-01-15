@@ -2,33 +2,32 @@
 
 function padString(str, len, char = '*', isRight = true) {
     if (!str || typeof str !== 'string') {
-        return 'помилка, це не рядок';
+        throw new Error('помилка, це не рядок');
     }
 
     if (!len || typeof len !=='number' || len <= 0) {
-        return 'помилка, хибна довжина';
+        throw new Error('помилка, хибна довжина');
+    }
+
+    if (len <= str.length) {
+        return str.substring(0, len);
     }
 
     if (typeof char !== 'string' || char.length !== 1) {
-        return 'помилка, символ не корректний';
+        throw new Error('помилка, символ не корректний');
     }
 
     if (typeof isRight !== 'boolean') {
-        return 'помилка, сторона вказана не вірно';
+        throw new Error('помилка, сторона вказана не вірно');
     }
     let result = '';
+    const calc = len - str.length;
 
-    if (len <= str.length) {
-        result = str.substring(0, len);
-    } else {
-        const calc = len - str.length;
-        for (let i =  0; i < calc ; i++) {
-            result = result + char;
-        }
-
-        result = isRight ? str + result : result + str;
+    for (let i =  0; i < calc ; i++) {
+        result = result + char;
     }
-    return result;
+
+    return isRight ? str + result : result + str;
 }
 
 

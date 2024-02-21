@@ -1,4 +1,4 @@
-const reduse = function (arr, callback, initialValue) {
+const reduce = function (arr, callback, initialValue) {
   let accumulator = initialValue !== undefined ? initialValue : arr[0];
   const startIndex = initialValue !== undefined ? 0 : 1;
 
@@ -8,9 +8,5 @@ const reduse = function (arr, callback, initialValue) {
   return accumulator;
 };
 const arr = [1, 2, 3, 4, 5, 6, 7];
-const sum = reduse(
-  arr,
-  (accumulator, currentValue) => accumulator + currentValue,
-  0
-);
-console.log(sum);
+
+console.log(reduce(arr, (acc, item) => acc + item));

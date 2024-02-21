@@ -7,7 +7,6 @@ const reduse = function (arr, callback, initialValue) {
   }
   return accumulator;
 };
-
 const arr = [1, 2, 3, 4, 5, 6, 7];
 const sum = reduse(
   arr,

@@ -1,4 +1,4 @@
-const liElements = document.querySelectorAll('ul#ulId li');
+const liElements = document.querySelectorAll('ul li');
 const textArray = [];
 
 for (const liElement of liElements) {
